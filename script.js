@@ -1,20 +1,10 @@
 function insert_Row() {
-    //Write your code here
-	
+    let table = document.getElementById("sampleTable");
+    let newRow = table.insertRow(0); // This will insert a new row at the top of the table
 
-    var t1 = document.createElement("TD");
-    var text1 = document.createTextNode("New Cell1");
-    t1.appendChild(text1);
-    var t2=document.createElement("TD");
-    var text2 = document.createTextNode("New Cell2");
-    t2.appendChild(text2);
-   
-    let  tr1=document.createElement("tr");
-    tr1.appendChild(t1);
-    tr1.appendChild(t2);
-    let Table=document.getElementById("sampleTable")
-    Table.insertBefore(tr1, Table.children[0]);
+    let cell1 = newRow.insertCell(0);
+    let cell2 = newRow.insertCell(1);
 
-  
-  
+    cell1.innerHTML = "New Cell1";
+    cell2.innerHTML = "New Cell2";
 }
